@@ -65,9 +65,30 @@
   .nav-links a{
     font-size:11px;letter-spacing:3px;text-transform:uppercase;
     color:var(--silver);text-decoration:none;
-    transition:color .3s;
+    transition:color .3s ease;
   }
   .nav-links a:hover{color:var(--gold)}
+  
+  /* MOBILE MENU TOGGLE */
+  .nav-toggle{display:none;background:none;border:none;color:var(--gold);font-size:24px;cursor:pointer;transition:all .3s ease}
+  .nav-toggle:hover{transform:scale(1.15)}
+  
+  /* MOBILE MENU */
+  .nav-mobile{
+    display:none;position:fixed;top:70px;left:0;right:0;
+    background:linear-gradient(180deg,rgba(15,15,24,.98),rgba(10,10,15,.95));
+    flex-direction:column;gap:0;
+    border-bottom:1px solid rgba(201,169,110,0.1);
+    padding:20px 0;
+    backdrop-filter:blur(10px);
+  }
+  .nav-mobile.active{display:flex}
+  .nav-mobile a{
+    padding:14px 28px;text-align:left;
+    border-bottom:1px solid rgba(201,169,110,0.05);
+    transition:all .3s ease;
+  }
+  .nav-mobile a:hover{background:rgba(201,169,110,0.08);padding-left:36px;color:var(--gold)}
 
   /* HERO */
   #hero{
@@ -137,9 +158,10 @@
     font-size:11px;letter-spacing:3px;
     text-transform:uppercase;text-decoration:none;
     font-weight:500;border:none;cursor:pointer;
-    transition:all .3s;
+    transition:all .3s ease;
+    border-radius:4px;
   }
-  .btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
+  .btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,169,110,0.2)}
   .btn-outline{
     padding:14px 36px;
     border:1px solid rgba(201,169,110,0.4);
@@ -147,9 +169,10 @@
     font-size:11px;letter-spacing:3px;
     text-transform:uppercase;text-decoration:none;
     font-weight:400;cursor:pointer;
-    transition:all .3s;background:transparent;
+    transition:all .3s ease;background:transparent;
+    border-radius:4px;
   }
-  .btn-outline:hover{border-color:var(--gold);background:rgba(201,169,110,0.07)}
+  .btn-outline:hover{border-color:var(--gold);background:rgba(201,169,110,0.07);transform:translateY(-2px)}
 
   /* HERO IMAGE */
   .hero-right{
@@ -524,11 +547,228 @@
     footer{flex-direction:column;gap:20px;text-align:center;padding:40px 28px}
     .nav-links{display:none}
   }
+  
+  /* TABLET LANDSCAPE (768px - 1024px) */
+  @media(max-width:1024px){
+    body{font-size:15px}
+    .hero-name{font-size:clamp(48px,6vw,80px)}
+    .section-heading{font-size:clamp(36px,4vw,56px)}
+    .hero-left{padding:100px 40px 60px}
+    .content-panel{padding:80px 40px}
+  }
+
+  /* TABLET PORTRAIT (481px - 768px) */
+  @media(max-width:768px){
+    body{font-size:15px}
+    nav{padding:16px 20px;background:linear-gradient(to bottom,rgba(10,10,15,.98) 0%,transparent 100%)}
+    .nav-logo{font-size:18px;letter-spacing:2px}
+    .nav-toggle{display:block}
+    .nav-links{display:none;gap:0}
+    .scroll-hint{bottom:24px;left:20px}
+    
+    /* HERO */
+    .hero-left{padding:90px 20px 40px}
+    .hero-name{font-size:clamp(36px,5vw,56px);margin-bottom:12px}
+    .hero-title{font-size:12px;margin-bottom:28px}
+    .hero-bio{font-size:14px;max-width:100%;margin-bottom:32px;line-height:1.8}
+    .hero-cta{gap:12px;flex-direction:column}
+    .btn-primary,.btn-outline{padding:12px 24px;font-size:10px;width:100%;text-align:center}
+    
+    /* SECTIONS */
+    .content-panel{padding:60px 20px;border-left:none}
+    .content-panel::before{display:none}
+    .section-number{font-size:11px;margin-bottom:12px}
+    .section-heading{font-size:clamp(28px,4vw,42px);margin-bottom:20px}
+    .section-text{font-size:14px;line-height:1.8;max-width:100%;margin-bottom:24px}
+    
+    /* TAGS */
+    .tag-list{gap:8px;margin-bottom:24px}
+    .tag{padding:6px 14px;font-size:10px}
+    
+    /* TIMELINE */
+    .timeline-item{padding:20px 0}
+    .tl-company{font-size:18px}
+    .tl-points li{font-size:13px;line-height:1.6;margin-bottom:4px}
+    
+    /* EDUCATION */
+    .edu-school{font-size:16px}
+    .edu-degree{font-size:11px}
+    
+    /* SKILLS */
+    .skill-grid{grid-template-columns:1fr;gap:10px}
+    .skill-item{padding:12px 16px;font-size:11px}
+    
+    /* LANGUAGES */
+    .lang-row{gap:12px}
+    .lang-badge{padding:10px 18px;font-size:10px}
+    
+    /* CONTACT */
+    .contact-item{gap:12px;margin-bottom:20px}
+    .contact-icon{width:40px;height:40px;font-size:16px}
+    .contact-label{font-size:8px}
+    .contact-value{font-size:13px}
+    
+    /* FOOTER */
+    footer{padding:32px 20px;gap:12px}
+    .footer-name{font-size:14px}
+    .footer-copy{font-size:9px}
+    
+    /* RESUME */
+    .resume-panel{padding:20px;margin:24px 0;border-radius:6px}
+    .resume-actions{flex-direction:column}
+    .resume-frame{height:280px}
+    
+    /* DIVIDERS */
+    .sec-divider{padding:0 20px}
+  }
+
+  /* MOBILE (max 480px) */
+  @media(max-width:480px){
+    body{font-size:14px}
+    
+    /* CURSOR HIDDEN ON TOUCH */
+    #cursor,#cursor-ring{display:none}
+    
+    /* NAV */
+    nav{padding:14px 16px}
+    .nav-logo{font-size:16px;letter-spacing:2px}
+    
+    /* HERO */
+    #hero{min-height:auto;padding-top:60px}
+    .hero-grid{min-height:auto}
+    .hero-left{padding:80px 16px 60px;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+    .hero-name{font-size:clamp(32px,6vw,48px);line-height:1.1;margin-bottom:8px}
+    .hero-title{font-size:11px;margin-bottom:20px;letter-spacing:2px}
+    .hero-bio{font-size:13px;max-width:100%;margin-bottom:24px;line-height:1.75;color:rgba(240,237,232,0.7)}
+    .hero-cta{flex-direction:column;gap:0}
+    .btn-primary,.btn-outline{padding:12px 20px;font-size:10px;letter-spacing:2px;width:100%;margin-bottom:10px;border-radius:3px}
+    .scroll-hint{bottom:16px;left:16px;font-size:8px}
+    
+    /* BG TEXT */
+    .hero-bg-text{font-size:clamp(40px,12vw,120px);letter-spacing:-3px}
+    
+    /* SECTIONS */
+    .section{padding:60px 0}
+    .content-panel{padding:40px 16px;position:relative}
+    .section-number{font-size:10px;margin-bottom:8px;letter-spacing:2px}
+    .section-heading{font-size:clamp(24px,5vw,36px);line-height:1.2;margin-bottom:16px}
+    .section-text{font-size:13px;line-height:1.75;margin-bottom:20px;max-width:100%}
+    
+    /* TAGS */
+    .tag-list{gap:6px;margin-bottom:20px}
+    .tag{padding:5px 12px;font-size:9px;letter-spacing:1px}
+    .tag:active{background:rgba(201,169,110,0.12);border-color:var(--gold)}
+    
+    /* TIMELINE */
+    .timeline-item{padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .tl-company{font-size:16px;margin-bottom:2px}
+    .tl-period{font-size:9px}
+    .tl-role{font-size:10px;margin-bottom:10px}
+    .tl-points li{font-size:12px;line-height:1.5;margin-bottom:3px;padding-left:12px}
+    .tl-points li::before{top:8px;width:3px}
+    
+    /* EDUCATION */
+    .edu-school{font-size:14px}
+    .edu-degree{font-size:10px}
+    .edu-year{font-size:9px}
+    
+    /* SKILLS */
+    .skill-grid{grid-template-columns:1fr;gap:8px;margin-bottom:24px}
+    .skill-item{padding:10px 14px;font-size:10px;letter-spacing:1px;border-radius:3px}
+    
+    /* LANGUAGES */
+    .lang-row{gap:8px;margin-bottom:24px}
+    .lang-badge{padding:8px 14px;font-size:9px;border-radius:3px}
+    
+    /* ORNAMENTS */
+    .ornament{margin-bottom:24px;gap:12px}
+    .ornament-line{width:24px}
+    
+    /* CONTACT */
+    .contact-block{margin-top:20px}
+    .contact-item{gap:12px;margin-bottom:16px;flex-direction:column;align-items:flex-start}
+    .contact-icon{width:36px;height:36px;font-size:14px;margin-bottom:0}
+    .contact-label{font-size:8px;letter-spacing:1px}
+    .contact-value{font-size:12px;line-height:1.6}
+    
+    /* FOOTER */
+    footer{padding:24px 16px;gap:8px;text-align:center;flex-direction:column-reverse}
+    .footer-name{font-size:13px;letter-spacing:2px}
+    .footer-copy{font-size:8px;letter-spacing:1px}
+    
+    /* RESUME */
+    .resume-panel{padding:16px;margin:20px 0;border-radius:4px;border:1px solid rgba(201,169,110,0.06)}
+    .resume-actions{flex-direction:column-reverse;gap:10px;width:100%;margin-top:14px}
+    .resume-actions a{width:100%;text-align:center;padding:10px 16px;font-size:10px}
+    
+    /* DIVIDERS */
+    .sec-divider{padding:0 16px;margin:40px 0}
+    .sec-diamond{margin:0 8px;width:6px;height:6px}
+    
+    /* ANIMATION TWEAKS */
+    .hero-tag{animation:fadeUp .7s .2s forwards}
+    .hero-name{animation:fadeUp .8s .3s forwards}
+    .hero-title{animation:fadeUp .8s .4s forwards}
+    .hero-bio{animation:fadeUp .8s .5s forwards}
+    .hero-cta{animation:fadeUp .8s .6s forwards}
+  }
+
+  /* SMALL MOBILE (max 360px) */
+  @media(max-width:360px){
+    nav{padding:12px 12px}
+    .nav-logo{font-size:14px}
+    .hero-left{padding:70px 12px 50px}
+    .hero-name{font-size:clamp(28px,5vw,40px)}
+    .hero-bio{font-size:12px}
+    .content-panel{padding:36px 12px}
+    .section-heading{font-size:clamp(20px,4vw,32px)}
+    .btn-primary,.btn-outline{padding:10px 16px;font-size:9px}
+    .skill-grid{gap:6px}
+    .lang-badge{padding:6px 12px;font-size:8px}
+  }
+
+  /* TOUCH DEVICE OPTIMIZATIONS */
+  @media(hover:none) and (pointer:coarse){
+    .btn-primary,.btn-outline,.tag,.skill-item,.lang-badge{
+      transition:all .2s ease;
+    }
+    .btn-primary:active,.btn-outline:active{transform:scale(0.98)}
+    .tag:active,.skill-item:active{background:rgba(201,169,110,0.12)}
+    .contact-item:active{opacity:0.8}
+  }
+  
+  /* PREFERS REDUCED MOTION */
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    html{scroll-behavior:auto}
+  }
   /* RESUME PANEL */
-  .resume-panel{padding:40px 80px;background:linear-gradient(180deg, rgba(201,169,110,0.02), transparent);border:1px solid rgba(201,169,110,0.04);margin:40px 60px;border-radius:8px}
-  .resume-actions{display:flex;gap:16px;margin-top:18px}
-  .resume-frame{width:100%;height:520px;border:1px solid rgba(255,255,255,0.04);margin-top:28px;border-radius:6px;background:#06060a}
-  @media(max-width:900px){ .resume-panel{padding:24px} .resume-frame{height:360px} }
+  .resume-panel{
+    padding:40px 80px;
+    background:linear-gradient(180deg, rgba(201,169,110,0.02), transparent);
+    border:1px solid rgba(201,169,110,0.04);
+    margin:40px 60px;
+    border-radius:8px;
+    transition:all .3s ease;
+  }
+  .resume-actions{
+    display:flex;
+    gap:16px;
+    margin-top:18px;
+    transition:all .3s ease;
+  }
+  .resume-frame{
+    width:100%;
+    height:520px;
+    border:1px solid rgba(255,255,255,0.04);
+    margin-top:28px;
+    border-radius:6px;
+    background:#06060a;
+  }
+  @media(max-width:900px){ 
+    .resume-panel{padding:24px;margin:24px 0} 
+    .resume-frame{height:360px} 
+  }
 </style>
 </head>
 <body>
@@ -546,7 +786,18 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="#about" class="nav-close-on-click">About</a>
+  <a href="#experience" class="nav-close-on-click">Experience</a>
+  <a href="#resume" class="nav-close-on-click">Resume</a>
+  <a href="#education" class="nav-close-on-click">Education</a>
+  <a href="#skills" class="nav-close-on-click">Skills</a>
+  <a href="#contact" class="nav-close-on-click">Contact</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -927,7 +1178,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
     const target=document.querySelector(a.getAttribute('href'));
-    if(target)target.scrollIntoView({behavior:'smooth'});
+    if(target){
+      target.scrollIntoView({behavior:'smooth'});
+      // Close mobile menu if open
+      if(navMobile && navMobile.classList.contains('active')){
+        navMobile.classList.remove('active');
+        if(navToggle) navToggle.textContent='☰';
+      }
+    }
   });
 });
 </script>
@@ -954,6 +1212,32 @@ window.addEventListener('load',()=>{
     setTimeout(()=>{ h.style.animationPlayState='running'; },160);
   }
 });
+
+// Mobile Menu Toggle
+const navToggle=document.getElementById('navToggle');
+const navMobile=document.getElementById('navMobile');
+const navCloseButtons=document.querySelectorAll('.nav-close-on-click');
+
+if(navToggle && navMobile){
+  navToggle.addEventListener('click',()=>{
+    navMobile.classList.toggle('active');
+    navToggle.textContent=navMobile.classList.contains('active')?'✕':'☰';
+  });
+
+  navCloseButtons.forEach(link=>{
+    link.addEventListener('click',()=>{
+      navMobile.classList.remove('active');
+      navToggle.textContent='☰';
+    });
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      navMobile.classList.remove('active');
+      navToggle.textContent='☰';
+    }
+  });
+}
 </script>
 </body>
 </html>
