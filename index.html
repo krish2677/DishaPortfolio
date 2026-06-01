@@ -29,7 +29,7 @@
     font-weight:300;
     overflow-x:hidden;
     cursor:none;
-    font-size:16px;
+    font-size:18px;
   }
 
   /* CUSTOM CURSOR */
@@ -216,7 +216,7 @@
   }
   .hero-name{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(70px,9vw,140px);
+    font-size:clamp(80px,10vw,160px);
     font-weight:900;line-height:1;
     margin-bottom:16px;
     opacity:0;animation:fadeUp .9s .5s forwards;
@@ -225,13 +225,13 @@
     font-style:italic;font-weight:300;color:var(--gold);
   }
   .hero-title{
-    font-size:14px;letter-spacing:4px;
+    font-size:16px;letter-spacing:4px;
     text-transform:uppercase;color:var(--silver);
     margin-bottom:48px;
     opacity:0;animation:fadeUp .9s .7s forwards;
   }
   .hero-bio{
-    font-size:17px;line-height:1.9;
+    font-size:19px;line-height:1.9;
     color:rgba(240,237,232,0.65);
     max-width:400px;margin-bottom:56px;
     opacity:0;animation:fadeUp .9s .9s forwards;
@@ -243,7 +243,7 @@
   .btn-primary{
     padding:14px 36px;
     background:var(--gold);color:#0a0a0f;
-    font-size:11px;letter-spacing:3px;
+    font-size:13px;letter-spacing:3px;
     text-transform:uppercase;text-decoration:none;
     font-weight:500;border:none;cursor:pointer;
     transition:all .3s ease;
@@ -254,12 +254,12 @@
     padding:14px 36px;
     border:1px solid rgba(201,169,110,0.4);
     color:var(--gold);
-    font-size:11px;letter-spacing:3px;
+    font-size:13px;letter-spacing:3px;
     text-transform:uppercase;text-decoration:none;
     font-weight:400;cursor:pointer;
     transition:all .3s ease;background:transparent;
     border-radius:4px;
-  }
+  }}
   .btn-outline:hover{border-color:var(--gold);background:rgba(201,169,110,0.07);transform:translateY(-2px)}
 
   /* HERO IMAGE */
@@ -356,7 +356,7 @@
   }
   .section-number{
     font-family:'Cormorant Garamond',serif;
-    font-size:13px;letter-spacing:5px;
+    font-size:15px;letter-spacing:5px;
     color:var(--gold);text-transform:uppercase;
     margin-bottom:12px;
     opacity:0;transition:all .8s .2s;
@@ -364,7 +364,7 @@
   }
   .section-heading{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(42px,5vw,72px);
+    font-size:clamp(48px,5.5vw,84px);
     font-weight:700;line-height:1.1;
     margin-bottom:20px;
     opacity:0;transition:all .9s .3s;
@@ -374,7 +374,7 @@
     font-style:italic;color:var(--gold);font-weight:300;
   }
   .section-text{
-    font-size:16px;line-height:1.95;
+    font-size:18px;line-height:1.95;
     color:rgba(240,237,232,0.6);
     margin-bottom:24px;
     opacity:0;transition:all .9s .4s;
@@ -402,7 +402,7 @@
   .tag{
     padding:8px 20px;
     border:1px solid rgba(201,169,110,0.3);
-    font-size:11px;letter-spacing:2.5px;
+    font-size:12px;letter-spacing:2.5px;
     text-transform:uppercase;color:var(--gold);
     transition:all .3s;
   }
@@ -640,9 +640,9 @@
   
   /* TABLET LANDSCAPE (768px - 1024px) */
   @media(max-width:1024px){
-    body{font-size:15px}
-    .hero-name{font-size:clamp(56px,7vw,100px)}
-    .section-heading{font-size:clamp(36px,4vw,56px)}
+    body{font-size:17px}
+    .hero-name{font-size:clamp(68px,7.5vw,110px)}
+    .section-heading{font-size:clamp(42px,4.5vw,64px)}
     .hero-left{padding:100px 40px 60px}
     .content-panel{padding:80px 40px}
   }
@@ -659,18 +659,18 @@
     /* HERO */
     .hero-img{max-height:65vh}
     .hero-left{padding:90px 20px 40px}
-    .hero-name{font-size:clamp(44px,6vw,72px);margin-bottom:12px}
-    .hero-title{font-size:12px;margin-bottom:28px}
-    .hero-bio{font-size:14px;max-width:100%;margin-bottom:32px;line-height:1.8}
+    .hero-name{font-size:clamp(50px,6.5vw,80px);margin-bottom:12px}
+    .hero-title{font-size:14px;margin-bottom:28px}
+    .hero-bio{font-size:16px;max-width:100%;margin-bottom:32px;line-height:1.8}
     .hero-cta{gap:12px;flex-direction:column}
-    .btn-primary,.btn-outline{padding:12px 24px;font-size:10px;width:100%;text-align:center}
+    .btn-primary,.btn-outline{padding:12px 24px;font-size:12px;width:100%;text-align:center}
     
     /* SECTIONS */
     .content-panel{padding:60px 20px;border-left:none}
     .content-panel::before{display:none}
     .section-number{font-size:11px;margin-bottom:12px}
-    .section-heading{font-size:clamp(28px,4vw,42px);margin-bottom:20px}
-    .section-text{font-size:14px;line-height:1.8;max-width:100%;margin-bottom:24px}
+    .section-heading{font-size:clamp(28px,4.5vw,48px);margin-bottom:20px}
+    .section-text{font-size:18px;line-height:1.8;max-width:100%;margin-bottom:24px}
     
     /* TAGS */
     .tag-list{gap:8px;margin-bottom:24px}
@@ -715,7 +715,7 @@
 
   /* MOBILE (max 480px) */
   @media(max-width:480px){
-    body{font-size:14px}
+    body{font-size:13px}
     
     /* CURSOR HIDDEN ON TOUCH */
     #cursor,#cursor-ring{display:none}
@@ -732,11 +732,11 @@
     .hero-grid{min-height:auto;grid-template-columns:1fr}
     .hero-right{height:auto;min-height:300px}
     .hero-left{padding:60px 16px 40px;display:flex;flex-direction:column;justify-content:flex-start}
-    .hero-name{font-size:clamp(36px,6.5vw,56px);line-height:1.1;margin-bottom:8px}
-    .hero-title{font-size:11px;margin-bottom:20px;letter-spacing:2px}
-    .hero-bio{font-size:13px;max-width:100%;margin-bottom:24px;line-height:1.75;color:rgba(240,237,232,0.7)}
+    .hero-name{font-size:clamp(40px,7vw,60px);line-height:1.1;margin-bottom:8px}
+    .hero-title{font-size:13px;margin-bottom:20px;letter-spacing:2px}
+    .hero-bio{font-size:15px;max-width:100%;margin-bottom:24px;line-height:1.75;color:rgba(240,237,232,0.7)}
     .hero-cta{flex-direction:column;gap:0}
-    .btn-primary,.btn-outline{padding:12px 20px;font-size:10px;letter-spacing:2px;width:100%;margin-bottom:10px;border-radius:3px}
+    .btn-primary,.btn-outline{padding:12px 20px;font-size:12px;letter-spacing:2px;width:100%;margin-bottom:10px;border-radius:3px}
     .scroll-hint{bottom:16px;left:16px;font-size:8px}
     .hero-img{max-height:75vh}
     
@@ -747,8 +747,8 @@
     .section{padding:40px 0}
     .content-panel{padding:40px 16px;position:relative;margin-top:0}
     .section-number{font-size:10px;margin-bottom:8px;letter-spacing:2px}
-    .section-heading{font-size:clamp(24px,5vw,36px);line-height:1.2;margin-bottom:16px}
-    .section-text{font-size:13px;line-height:1.75;margin-bottom:20px;max-width:100%}
+    .section-heading{font-size:clamp(26px,5vw,40px);line-height:1.2;margin-bottom:16px}
+    .section-text{font-size:17px;line-height:1.75;margin-bottom:20px;max-width:100%}
     
     /* TAGS */
     .tag-list{gap:6px;margin-bottom:20px}
@@ -814,13 +814,13 @@
     nav{padding:12px 12px}
     .nav-logo{font-size:14px}
     .hero-left{padding:50px 12px 30px}
-    .hero-name{font-size:clamp(32px,5.5vw,52px)}
-    .hero-bio{font-size:12px}
+    .hero-name{font-size:clamp(36px,6vw,56px)}
+    .hero-bio{font-size:14px}
     .hero-img{max-height:72vh;width:95%}
     .hero-right{min-height:280px}
     .content-panel{padding:36px 12px}
-    .section-heading{font-size:clamp(20px,4vw,32px)}
-    .btn-primary,.btn-outline{padding:10px 16px;font-size:9px}
+    .section-heading{font-size:clamp(22px,4.5vw,36px)}
+    .btn-primary,.btn-outline{padding:10px 16px;font-size:11px}
     .skill-grid{gap:6px}
     .lang-badge{padding:6px 12px;font-size:8px}
   }
@@ -890,8 +890,8 @@
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
   <a href="#about" class="nav-close-on-click">About</a>
-  <a href="#experience" class="nav-close-on-click">Experience</a>
   <a href="#resume" class="nav-close-on-click">Resume</a>
+  <a href="#experience" class="nav-close-on-click">Experience</a>
   <a href="#education" class="nav-close-on-click">Education</a>
   <a href="#skills" class="nav-close-on-click">Skills</a>
   <a href="#contact" class="nav-close-on-click">Contact</a>
@@ -969,7 +969,7 @@
   <div class="section-inner">
     <div class="content-panel">
       <div class="ornament"><div class="ornament-line"></div><div class="ornament-dot"></div></div>
-      <p class="section-number">04.5 Resume</p>
+      <p class="section-number">02 Resume</p>
       <h2 class="section-heading">Resume<br/><em>Overview</em></h2>
       <p class="section-text">View or download my up-to-date resume (PDF). Click "Open" to preview in your browser, or use "Download" to save a copy.</p>
       <div class="resume-panel">
@@ -992,7 +992,7 @@
   <div class="section-inner reverse">
     <div class="content-panel">
       <div class="ornament"><div class="ornament-line"></div><div class="ornament-dot"></div></div>
-      <p class="section-number">02 Work Experience</p>
+      <p class="section-number">03 Work Experience</p>
       <h2 class="section-heading">Career<br/><em>Journey</em></h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -1041,7 +1041,7 @@
     </div>
     <div class="content-panel">
       <div class="ornament"><div class="ornament-line"></div><div class="ornament-dot"></div></div>
-      <p class="section-number">03 Education</p>
+      <p class="section-number">04 Education</p>
       <h2 class="section-heading">Academic<br/><em>Foundation</em></h2>
       <div class="timeline">
         <div class="edu-item">
@@ -1078,7 +1078,7 @@
   <div class="section-inner reverse">
     <div class="content-panel">
       <div class="ornament"><div class="ornament-line"></div><div class="ornament-dot"></div></div>
-      <p class="section-number">04 Skills & Languages</p>
+      <p class="section-number">05 Skills & Languages</p>
       <h2 class="section-heading">Core<br/><em>Competencies</em></h2>
       <div class="skill-grid">
         <div class="skill-item">Rapport Building</div>
@@ -1124,7 +1124,7 @@
     </div>
     <div class="content-panel">
       <div class="ornament"><div class="ornament-line"></div><div class="ornament-dot"></div></div>
-      <p class="section-number">05 Contact</p>
+      <p class="section-number">06 Contact</p>
       <h2 class="section-heading">Let's<br/><em>Connect</em></h2>
       <div class="contact-block">
         <div class="contact-item">
@@ -1169,7 +1169,7 @@
 
 <footer>
   <div class="footer-name">Disha Darji</div>
-  <div class="footer-copy">Client Relationships · Graphic Designer · Mumbai</div>
+  <div class="footer-copy">Customer Management · Mumbai</div>
 </footer>
 
 <script>
